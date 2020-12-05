@@ -3,6 +3,7 @@ module github.com/monaeo/goauth2
 go 1.14
 
 require (
+	github.com/davecgh/go-spew v1.1.1
 	github.com/go-oauth2/oauth2/v4 v4.1.2
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/google/uuid v1.1.2

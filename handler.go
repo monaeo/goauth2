@@ -85,6 +85,8 @@ func InitializeWithStores(clientStore *oauth2_mysql.ClientStore, tokenStore *oau
 
 // AddOAuth2Routes handles authentication endpoints
 func AddOAuth2Routes(path string, r *mux.Router) *mux.Router {
+
+	// Handle a Token request i.e. http://localhost/token?grant_type=client_credentials&client_id=000000&client_secret=999999&scope=read
 	r.HandleFunc(fmt.Sprintf("%s/token", path), func(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("Handle /token route?\n")
 		oauth2Srv.HandleTokenRequest(w, r)
